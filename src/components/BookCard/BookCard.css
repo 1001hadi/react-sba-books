@@ -1,0 +1,40 @@
+.card {
+  border: 2px solid #f18909;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  align-items: center;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-body h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 0;
+}

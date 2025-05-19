@@ -1,3 +1,5 @@
+import "./BookCard.css"
+
 const BookCard = ({ books }) => {
   console.log(books);
 
@@ -15,6 +17,7 @@ const BookCard = ({ books }) => {
             <div className="card-body">
               <h3>{title}</h3>
               <p>By: {author}</p>
+              {/* <p>&#0036; 20</p> */}
             </div>
           </div>
         );

@@ -1,7 +1,7 @@
 import "../App.css";
 import { useState } from "react";
 import axios from "axios";
-import BookCard from "../components/BookCard";
+import BookCard from "../components/BookCard/BookCard";
 const Home = () => {
   const [searchQ, setSearchQ] = useState("");
   const [books, setBooks] = useState([]);
@@ -37,7 +37,7 @@ const Home = () => {
           />
           <button type="submit">Search</button>
         </form>
-        <div className="card-container">
+        <div className="book-container">
           <BookCard books={books} />
         </div>
       </div>

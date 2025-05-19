@@ -5,8 +5,64 @@
   text-align: center;
 }
 
-/* .container {
-  background:teal;
-} */
+.container {
+  max-width: 1280px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
 
+h1 {
+  font-size: 2.5em;
+  color: #de7f02;
+  margin-bottom: 15px;
+}
 
+p {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 1.5em;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  background-color: #fff;
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 300px;
+}
+
+button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #dc8503;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
