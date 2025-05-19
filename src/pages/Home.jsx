@@ -1,16 +1,20 @@
 import "../App.css";
 import { useState } from "react";
 import axios from "axios";
+import BookCard from "../components/BookCard";
 const Home = () => {
   const [searchQ, setSearchQ] = useState("");
+  const [books, setBooks] = useState([]);
+  const apiKey = import.meta.env.VITE_API_KEY;
 
   async function handleSearch(e) {
     e.preventDefault();
     try {
-      const response = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchQ}`
+      const res = await axios.get(
+        `https://www.googleapis.com/books/v1/volumes?q=${searchQ}&key=${apiKey}`
       );
-      console.log("Search Results:", response.data);
+      console.log("Search results:", res.data);
+      setBooks(res.data.items);
     } catch (err) {
       console.error("Error fetching books:", err);
     }
@@ -33,6 +37,9 @@ const Home = () => {
           />
           <button type="submit">Search</button>
         </form>
+        <div className="card-container">
+          <BookCard books={books} />
+        </div>
       </div>
     </>
   );
