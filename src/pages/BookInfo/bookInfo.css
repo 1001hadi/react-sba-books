@@ -1,0 +1,132 @@
+.details-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #c7c7c7;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.back-button {
+  background-color: #d67a03;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #bd6d03;
+}
+
+.book-details-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.book-details-image {
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.book-details-image img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-details-info {
+  flex-grow: 1;
+  min-width: 300px;
+}
+
+.book-details-info h2 {
+  color: #0056b3;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.book-details-info h3 {
+  color: #444;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.book-details-info p {
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.book-details-info strong {
+  color: #222;
+}
+
+.book-description {
+  background-color: #f9f9f9;
+  border-left: 4px solid #007bff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.details-links {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.details-button {
+  padding: 10px 20px;
+  background-color: #d67a03;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  text-align: center;
+  flex-grow: 1;
+  max-width: 200px;
+}
+
+.details-button:hover {
+  background-color: #ba6a03;
+}
+
+/* for mobile screen */
+@media (max-width: 768px) {
+  .book-details-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-details-image {
+    margin-bottom: 20px;
+  }
+
+  .book-details-info {
+    text-align: center;
+    min-width: unset;
+  }
+
+  .book-details-info h2,
+  .book-details-info h3,
+  .book-details-info p {
+    text-align: center;
+  }
+
+  .details-links {
+    justify-content: center;
+  }
+}
