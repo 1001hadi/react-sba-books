@@ -29,3 +29,8 @@
 7- create and navigate to book info page with React router when the book clicked
 
 8- Fetch and display that Book is info for the user
+
+## Create Favorite books page
+
+9- Display user favorites books in favorite page
+10- style it with css
