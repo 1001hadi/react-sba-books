@@ -10,14 +10,23 @@
 
 # Build process:
 
-### The search has been powered by Google Books API.
+1- The search has been powered by Google Books API.
 
 ## Main page:
 
-### Must provide Search bar for users and display card / carousel after search completed.
+2- Must provide Search bar for users and display card / carousel after search completed.
 
-### When user click on 1 of the book, it should directed to book page with book information display.
+3- When user click on 1 of the book, it should directed to book page with book information display.
 
-### User must be able to Choice multiple books as their favorite.
+4- User must be able to Choice multiple books as their favorite.
 
-### Create favorite page and display the books user marked as favorite.
+5- Create favorite page and display the books user marked as favorite.
+
+## Show The Book user want to see more info about it
+
+6- Make bookCard interActive to user can click on it and identify which book was clicked by it's id
+
+7- create and navigate to book info page with React router when the book clicked
+
+8- Fetch and display that Book is info for the user
+

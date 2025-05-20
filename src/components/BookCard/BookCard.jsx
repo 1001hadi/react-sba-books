@@ -1,7 +1,7 @@
 import "./BookCard.css"
 
 const BookCard = ({ books }) => {
-  console.log(books);
+  // console.log(books);
 
   return (
     <>
@@ -9,7 +9,7 @@ const BookCard = ({ books }) => {
         // got this line from stack overflow as mine not work!
         let image = book.volumeInfo.imageLinks?.smallThumbnail;
         let title = book.volumeInfo?.title;
-        let author = book.volumeInfo?.authors?.join(", ");
+        let author = book.volumeInfo?.authors;
 
         return (
           <div className="card" key={book.id}>
