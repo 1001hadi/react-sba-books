@@ -60,7 +60,6 @@ const BookInfo = () => {
   const averageRating = volumeInfo.averageRating || "N/A";
   const ratingsCount = volumeInfo.ratingsCount || 0;
   const previewLink = volumeInfo.previewLink;
-  const buyLink = saleInfo?.buyLink;
   const retailPrice = saleInfo?.retailPrice?.amount
     ? `${saleInfo.retailPrice.amount} ${saleInfo.retailPrice.currencyCode}`
     : "Not for sale";
@@ -99,8 +98,8 @@ const BookInfo = () => {
       </div>
       <div className="book-description">
         <h3>Description:</h3>
-        {description}
-        <div />
+        {/* This part come from stack overflow as description was show html element in the info page */}
+        <div dangerouslySetInnerHTML={{ __html: description }} />
 
         <div className="details-links">
           {previewLink && (
