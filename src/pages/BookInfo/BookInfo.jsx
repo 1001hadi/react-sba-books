@@ -95,35 +95,24 @@ const BookInfo = () => {
           <p>
             <strong>Price:</strong> {retailPrice}
           </p>
-          <h3>Description:</h3>
-          {/* Using dangerouslySetInnerHTML to render HTML from description, but be cautious with untrusted sources */}
-          <div
-            dangerouslySetInnerHTML={{ __html: description }}
-            className="book-description"
-          />
+        </div>
+      </div>
+      <div className="book-description">
+        <h3>Description:</h3>
+        {description}
+        <div />
 
-          <div className="details-links">
-            {previewLink && (
-              <a
-                href={previewLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="details-button"
-              >
-                Preview Book
-              </a>
-            )}
-            {buyLink && (
-              <a
-                href={buyLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="details-button primary"
-              >
-                Buy Now
-              </a>
-            )}
-          </div>
+        <div className="details-links">
+          {previewLink && (
+            <a
+              href={previewLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="details-button"
+            >
+              Preview Book
+            </a>
+          )}
         </div>
       </div>
     </div>
