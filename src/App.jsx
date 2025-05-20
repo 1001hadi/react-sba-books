@@ -1,11 +1,14 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
+import BookInfo from "./pages/BookInfo";
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/books/:bookId" element={<BookInfo />} />
+    </Routes>
   );
 }
 

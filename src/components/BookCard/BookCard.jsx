@@ -1,7 +1,11 @@
-import "./BookCard.css"
+import "./BookCard.css";
+import { Link } from "react-router-dom";
 
 const BookCard = ({ books }) => {
   // console.log(books);
+  if (!books) {
+    return <p>Book You searched not found, Please try again!</p>;
+  }
 
   return (
     <>
@@ -12,14 +16,16 @@ const BookCard = ({ books }) => {
         let author = book.volumeInfo?.authors;
 
         return (
-          <div className="card" key={book.id}>
-            <img src={image} alt="book image" />
-            <div className="card-body">
-              <h3>{title}</h3>
-              <p>By: {author}</p>
-              {/* <p>&#0036; 20</p> */}
+          <Link to={`/book/${book.id}`} key={book.id}>
+            <div className="card">
+              <img src={image} alt="book image" />
+              <div className="card-body">
+                <h3>{title}</h3>
+                <p>By: {author}</p>
+                {/* <p>&#0036; 20</p> */}
+              </div>
             </div>
-          </div>
+          </Link>
         );
       })}
     </>
