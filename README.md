@@ -29,4 +29,3 @@
 7- create and navigate to book info page with React router when the book clicked
 
 8- Fetch and display that Book is info for the user
-

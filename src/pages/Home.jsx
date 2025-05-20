@@ -14,7 +14,12 @@ const Home = () => {
         `https://www.googleapis.com/books/v1/volumes?q=${searchQ}&key=${apiKey}`
       );
       //   console.log("Search results:", res.data);
-      setBooks(res.data.items);
+      if (res.data.items) {
+        setBooks(res.data.items);
+      } else {
+        setBooks([]);
+        <p>No Book found, try other search!</p>;
+      }
     } catch (err) {
       console.error("Error fetching books:", err);
     }

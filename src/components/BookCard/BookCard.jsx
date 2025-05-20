@@ -13,10 +13,10 @@ const BookCard = ({ books }) => {
         // got this line from stack overflow as mine not work!
         let image = book.volumeInfo.imageLinks?.smallThumbnail;
         let title = book.volumeInfo?.title;
-        let author = book.volumeInfo?.authors;
+        let author = book.volumeInfo?.authors[0];
 
         return (
-          <Link to={`/book/${book.id}`} key={book.id}>
+          <Link to={`/books/${book.id}`} key={book.id}>
             <div className="card">
               <img src={image} alt="book image" />
               <div className="card-body">
@@ -27,7 +27,7 @@ const BookCard = ({ books }) => {
               <button
                 onClick={(e) => {
                   e.preventDefault();
-                  e.stopPropagation();
+                  // e.stopPropagation();
                   alert(`Add ${book.volumeInfo.title} to favorites`);
                 }}
               >
