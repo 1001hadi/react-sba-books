@@ -24,6 +24,15 @@ const BookCard = ({ books }) => {
                 <p>By: {author}</p>
                 {/* <p>&#0036; 20</p> */}
               </div>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  alert(`Add ${book.volumeInfo.title} to favorites`);
+                }}
+              >
+                Add to your Favorites
+              </button>
             </div>
           </Link>
         );
