@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import BookInfo from "./pages/BookInfo/BookInfo";
 import FavoriteBook from "./pages/FavoriteBook";
 import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   // local storage setup
@@ -28,30 +29,67 @@ function App() {
     }
   }, [favoriteBooks]);
 
-  // handle adding favorite book 
-   const handleAdd = (bookToAdd) => {
-    setFavoriteBooks(prevFavorites => {
-      const isFavoriteBook = prevFavorites.some(book => book.id === bookToAdd.id);
+  // handle adding favorite book
+  const handleAdd = (bookToAdd) => {
+    setFavoriteBooks((prevFavorites) => {
+      const isFavoriteBook = prevFavorites.some(
+        (book) => book.id === bookToAdd.id
+      );
       if (isFavoriteBook) {
-        alert(`Book "${bookToAdd.volumeInfo.title}" is already in your favorites.`);
+        alert(
+          `Book "${bookToAdd.volumeInfo.title}" is already in your favorites.`
+        );
         return prevFavorites;
       }
       alert(`Adding "${bookToAdd.volumeInfo.title}" to favorites.`);
-      return [...prevFavorites, bookToAdd]; 
+      return [...prevFavorites, bookToAdd];
     });
   };
 
   // handle remove favorite book
+  const HandleRemove = (bookId) => {
+    setFavoriteBooks((prevFavorites) => {
+      const newFavorites = prevFavorites.filter((book) => book.id !== bookId);
+      alert(`Book with ID "${bookId}" has been removed from your favorites.`);
+      return newFavorites;
+    });
+  };
 
   // checking if the book is favorite book
+  const handleFavorite = (bookId) => {
+    return favoriteBooks.some((book) => book.id === bookId);
+  };
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/books/:bookId" element={<BookInfo />} />
-      <Route path="/favorites" element={<FavoriteBook />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={<Home addFavorite={handleAdd} isFavorite={handleFavorite} />}
+        />
+        <Route
+          path="/books/:bookId"
+          element={
+            <BookInfo
+              addFavorite={handleAdd}
+              removeFavorite={HandleRemove}
+              isFavorite={handleFavorite}
+            />
+          }
+        />
+        <Route
+          path="/favorites"
+          element={
+            <FavoriteBook
+              favoriteBooks={favoriteBooks}
+              removeFavorite={HandleRemove}
+            />
+          }
+        />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
 

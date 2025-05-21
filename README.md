@@ -37,6 +37,7 @@
 - create state for favorite books
 - add the state to local storage for memory
 - do this operation in try/catch block
-- handle add and remove operation 
+- handle add and remove operation
+- navigation bar has been added in this step -
 
 10- style it with css
