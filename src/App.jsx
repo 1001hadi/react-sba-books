@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import BookInfo from "./pages/BookInfo/BookInfo";
-import FavoriteBook from "./pages/FavoriteBook";
+import FavoriteBook from "./pages/FavoriteBook/FavoriteBook";
 import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar/Navbar";
 

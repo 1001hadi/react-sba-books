@@ -1,9 +1,10 @@
+import React from "react";
 import "./BookCard.css";
 import { Link } from "react-router-dom";
 
 const BookCard = ({ books, addFavorite, isFavorite }) => {
   // console.log(books);
-  if (!books) {
+  if (!books || books.length === 0) {
     return <p>Book You searched not found, Please try again!</p>;
   }
 
@@ -26,7 +27,6 @@ const BookCard = ({ books, addFavorite, isFavorite }) => {
               <div className="card-body">
                 <h3>{title}</h3>
                 <p>By: {author}</p>
-                {/* <p>&#0036; 20</p> */}
               </div>
               <button
                 className={`favorite-button ${
@@ -35,10 +35,16 @@ const BookCard = ({ books, addFavorite, isFavorite }) => {
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  alert(`Add ${book.volumeInfo.title} to favorites`);
+
+                  if (isFavorite(book.id)) {
+                    alert(`"${title}" is already in your favorites!`);
+                  } else {
+                    addFavorite(book);
+                    alert(`"${title}" Added to your favorites!`);
+                  }
                 }}
               >
-                {isFavorite(book.id) ? "❤️ In Favorites" : "♡ Add to Favorites"}
+                {isFavorite(book.id) ? "❤️ In Favorites" : "♡ Add to Favorites"}{" "}
               </button>
             </div>
           </Link>
