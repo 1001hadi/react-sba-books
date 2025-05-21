@@ -100,6 +100,31 @@
   background-color: #ba6a03;
 }
 
+.details-page-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.details-page-button:hover {
+  background-color: #0056b3;
+}
+
+.details-page-button.is-favorite {
+  background-color: #ff4757;
+  border: 1px solid #ff4757;
+}
+
+.details-page-button.is-favorite:hover {
+  background-color: #e03646;
+}
+
 /* for mobile screen */
 @media (max-width: 768px) {
   .book-details-content {

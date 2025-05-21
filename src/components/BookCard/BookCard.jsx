@@ -1,7 +1,7 @@
 import "./BookCard.css";
 import { Link } from "react-router-dom";
 
-const BookCard = ({ books }) => {
+const BookCard = ({ books, addFavorite, isFavorite }) => {
   // console.log(books);
   if (!books) {
     return <p>Book You searched not found, Please try again!</p>;
@@ -16,7 +16,11 @@ const BookCard = ({ books }) => {
         let author = book.volumeInfo?.authors[0];
 
         return (
-          <Link to={`/books/${book.id}`} key={book.id}>
+          <Link
+            to={`/books/${book.id}`}
+            key={book.id}
+            className="book-card-link"
+          >
             <div className="card">
               <img src={image} alt="book image" />
               <div className="card-body">
@@ -25,13 +29,16 @@ const BookCard = ({ books }) => {
                 {/* <p>&#0036; 20</p> */}
               </div>
               <button
+                className={`favorite-button ${
+                  isFavorite(book.id) ? "is-favorite" : ""
+                }`}
                 onClick={(e) => {
                   e.preventDefault();
-                  // e.stopPropagation();
+                  e.stopPropagation();
                   alert(`Add ${book.volumeInfo.title} to favorites`);
                 }}
               >
-                Add to your Favorites
+                {isFavorite(book.id) ? "❤️ In Favorites" : "♡ Add to Favorites"}
               </button>
             </div>
           </Link>

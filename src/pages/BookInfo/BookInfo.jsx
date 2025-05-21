@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./bookInfo.css";
 
-const BookInfo = () => {
+const BookInfo = ({ addFavorite, removeFavorite, isFavorite }) => {
   // get the bookId from the URL,
   const { bookId } = useParams();
   const [book, setBook] = useState(null);
@@ -33,7 +33,21 @@ const BookInfo = () => {
     if (bookId) {
       fetchBookDetails();
     }
-  }, [bookId, apiKey]); // Re-run effect if bookId or apiKey changes
+  }, [bookId, apiKey]);
+
+  const isCurrentBookFavorite = book ? isFavorite(book.id) : false;
+
+  const handleFavoriteClick = () => {
+    if (!book) return;
+
+    if (isCurrentBookFavorite) {
+      removeFavorite(book.id);
+      alert(`Removed "${book.volumeInfo.title}" from favorites.`);
+    } else {
+      addFavorite(book);
+      alert(`Added "${book.volumeInfo.title}" to favorites!`);
+    }
+  };
 
   if (loading) {
     return <div className="details-container">Loading book details...</div>;
@@ -94,6 +108,16 @@ const BookInfo = () => {
           <p>
             <strong>Price:</strong> &#0036;{retailPrice}
           </p>
+          <button
+            onClick={handleFavoriteClick}
+            className={`favorite-button details-page-button ${
+              isCurrentBookFavorite ? "is-favorite" : ""
+            }`}
+          >
+            {isCurrentBookFavorite
+              ? "❤️ Remove from Favorites"
+              : "♡ Add to Favorites"}
+          </button>
         </div>
       </div>
       <div className="book-description">

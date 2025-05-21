@@ -2,7 +2,7 @@ import "../App.css";
 import { useState } from "react";
 import axios from "axios";
 import BookCard from "../components/BookCard/BookCard";
-const Home = () => {
+const Home = ({ addFavorite, isFavorite }) => {
   const [searchQ, setSearchQ] = useState("");
   const [books, setBooks] = useState([]);
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -43,7 +43,11 @@ const Home = () => {
           <button type="submit">Search</button>
         </form>
         <div className="book-container">
-          <BookCard books={books} />
+          <BookCard
+            books={books}
+            addFavorite={addFavorite}
+            isFavorite={isFavorite}
+          />
         </div>
       </div>
     </>

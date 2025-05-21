@@ -38,3 +38,13 @@
   color: #333;
   margin-bottom: 0;
 }
+
+.favorite-button.is-favorite {
+  background-color: #ff4757;
+  color: white;
+  border: 1px solid #ff4757;
+}
+
+.favorite-button.is-favorite:hover {
+  background-color: #e03646;
+}
