@@ -56,7 +56,7 @@ const BookInfo = () => {
   const publishedDate = volumeInfo.publishedDate || "N/A";
   const description = volumeInfo.description || "No description available.";
   const pageCount = volumeInfo.pageCount || "N/A";
-  const categories = volumeInfo.categories?.join(", ") || "N/A";
+  const categories = volumeInfo.categories[0] || "N/A";
   const averageRating = volumeInfo.averageRating || "N/A";
   const ratingsCount = volumeInfo.ratingsCount || 0;
   const previewLink = volumeInfo.previewLink;
@@ -92,7 +92,7 @@ const BookInfo = () => {
             <strong>Rating:</strong> {averageRating} ({ratingsCount} reviews)
           </p>
           <p>
-            <strong>Price:</strong> {retailPrice}
+            <strong>Price:</strong> &#0036;{retailPrice}
           </p>
         </div>
       </div>

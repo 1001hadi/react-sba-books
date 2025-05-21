@@ -33,4 +33,9 @@
 ## Create Favorite books page
 
 9- Display user favorites books in favorite page
+
+- create state for favorite books
+- add the state to local storage for memory
+- do this operation in try/catch block
+
 10- style it with css

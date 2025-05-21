@@ -13,7 +13,7 @@ const Home = () => {
       const res = await axios.get(
         `https://www.googleapis.com/books/v1/volumes?q=${searchQ}&key=${apiKey}`
       );
-      //   console.log("Search results:", res.data);
+      // console.log("Search results:", res.data);
       if (res.data.items) {
         setBooks(res.data.items);
       } else {
