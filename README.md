@@ -1,6 +1,7 @@
 # Book Search App
 
-[Try it live]: https://activesearch.netlify.app/
+[Try it live][live-demo]
+[live-demo]: https://activesearch.netlify.app/
 
 #
 
