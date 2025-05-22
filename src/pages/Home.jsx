@@ -19,13 +19,6 @@ const Home = ({ addFavorite, isFavorite }) => {
       setErrorMessage("Please enter a search term.");
       return;
     }
-
-    // if (!apiKey) {
-    //   setErrorMessage(
-    //     "API Key is missing. Please set VITE_API_KEY in your .env file."
-    //   );
-    //   return;
-    // }
     try {
       const res = await axios.get(
         `https://www.googleapis.com/books/v1/volumes?q=${searchQ}&key=${apiKey}`

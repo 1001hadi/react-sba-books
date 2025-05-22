@@ -1,10 +1,28 @@
-.mainNavbar > ul {
+.mainNavbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border-bottom: 5px solid #dc8503;
+}
+
+.mainNavbar h2 {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.mainNavbar ul {
   list-style-type: none;
+  display: flex;
   padding: 0;
+}
+
+.mainNavbar > ul > li {
+  color: #dc8503;
+  margin: 0 20px;
+  font-weight: bold;
 }
 
 .mainNavbar > ul > li > a {
   text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
 }

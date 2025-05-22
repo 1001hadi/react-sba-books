@@ -14,7 +14,7 @@
 
 h1 {
   font-size: 2.5em;
-  color: #de7f02;
+  color: #fff;
   margin-bottom: 15px;
 }
 
@@ -69,11 +69,11 @@ button[type="submit"]:hover {
 
 .message-info {
   text-align: center;
-  color: #d9534f;
+  color: #e74944;
   font-weight: bold;
   margin-top: 20px;
   padding: 10px;
-  border: 1px solid #d9534f;
-  background-color: #f8d7da;
+  border: 1px solid #dc4742;
+  background-color: #cbcaca;
   border-radius: 5px;
 }

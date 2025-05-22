@@ -4,6 +4,9 @@ import styles from "./Navbar.module.css";
 export default function Navbar() {
   return (
     <nav className={styles.mainNavbar}>
+      <div>
+        <h2>The Book Search</h2>
+      </div>
       <ul>
         <li>
           <Link to="/">HomePage</Link>
