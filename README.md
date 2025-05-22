@@ -1,4 +1,4 @@
-# Book Search App
+# Active Search
 
 #
 
@@ -44,7 +44,7 @@
 - handle add and remove operation
 - navigation bar has been added in this step -
 
-10- style it with css
+10- style it with css/ soon will be updated with Tailwind CSS!
 
 #
 
