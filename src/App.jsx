@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  // local storage setup
+  // local storage state setup
   const [favoriteBooks, setFavoriteBooks] = useState(() => {
     try {
       const storedData = localStorage.getItem("favoriteBooks");
@@ -41,7 +41,6 @@ function App() {
         );
         return prevFavorites;
       }
-      // alert(`Adding "${bookToAdd.volumeInfo.title}" to favorites.`);
       return [...prevFavorites, bookToAdd];
     });
   };
@@ -50,7 +49,6 @@ function App() {
   const HandleRemove = (bookId) => {
     setFavoriteBooks((prevFavorites) => {
       const newFavorites = prevFavorites.filter((book) => book.id !== bookId);
-      // alert(`Book with ID "${bookId}" has been removed from your favorites.`);
       return newFavorites;
     });
   };
