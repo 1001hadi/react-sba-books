@@ -8,7 +8,7 @@
 }
 
 .back-button {
-  background-color: #d67a03;
+  background-color: #335c67;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -20,7 +20,7 @@
 }
 
 .back-button:hover {
-  background-color: #bd6d03;
+  background-color: #2c515b;
 }
 
 .book-details-content {
@@ -47,7 +47,7 @@
 }
 
 .book-details-info h2 {
-  color: #0056b3;
+  color: #588157;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 2em;
@@ -85,7 +85,7 @@
 
 .details-button {
   padding: 10px 20px;
-  background-color: #d67a03;
+  background-color: #588157;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -97,11 +97,11 @@
 }
 
 .details-button:hover {
-  background-color: #ba6a03;
+  background-color: #476b47;
 }
 
 .details-page-button {
-  background-color: #007bff;
+  background-color: #a7c957;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -113,16 +113,16 @@
 }
 
 .details-page-button:hover {
-  background-color: #0056b3;
+  background-color: #8dac44;
 }
 
 .details-page-button.is-favorite {
-  background-color: #ff4757;
-  border: 1px solid #ff4757;
+  background-color: #a61d20;
+  border: none;
 }
 
 .details-page-button.is-favorite:hover {
-  background-color: #e03646;
+  background-color: #cc3241;
 }
 
 /* for mobile screen */

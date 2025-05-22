@@ -45,3 +45,5 @@
 #
 
 ## Challenges
+
+### My main challenge was how to avoid crashing the app when using none verbal search term, that i got help from stack overflow and few good article in [geagsforgeegs](https://www.geeksforgeeks.org/), that finally help me to fix the bug i had with search term.

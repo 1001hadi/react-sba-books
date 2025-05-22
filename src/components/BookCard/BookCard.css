@@ -1,9 +1,7 @@
 .card {
-  border: 2px solid #f18909;
+  border: 2px solid #495057;
   border-radius: 8px;
-  overflow: hidden;
   width: 200px;
-
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -31,6 +29,8 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: #fff;
+  text-decoration: none;
 }
 
 .card-body p {
@@ -39,10 +39,17 @@
   margin-bottom: 0;
 }
 
+.favorite-button {
+  background-color: #a7c957;
+  padding: 3px 5px;
+  font-size: 1rem;
+  border: none;
+}
+
 .favorite-button.is-favorite {
-  background-color: #ff4757;
+  background-color: #a61d20;
   color: white;
-  border: 1px solid #ff4757;
+  border: none;
 }
 
 .favorite-button.is-favorite:hover {

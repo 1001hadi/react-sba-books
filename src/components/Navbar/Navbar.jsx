@@ -5,11 +5,13 @@ export default function Navbar() {
   return (
     <nav className={styles.mainNavbar}>
       <div>
-        <h2>The Book Search</h2>
+        <h2>
+          <span>Active</span> Search
+        </h2>
       </div>
       <ul>
         <li>
-          <Link to="/">HomePage</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/favorites">Favorites</Link>

@@ -41,11 +41,11 @@ const Home = ({ addFavorite, isFavorite }) => {
   return (
     <>
       <div className="container">
-        <h1>Search your favorite Books here!</h1>
+        <h1>Search your favorite Book with Active Search!</h1>
         <p>
           You can Search for you favorites Books and get all info you need, you
           are also able to mark any book you like as your favorite and collect
-          them on your collection page.
+          them on your favorite page.
         </p>
         <form onSubmit={handleSearch}>
           <input

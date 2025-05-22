@@ -13,8 +13,11 @@ const BookCard = ({ books, addFavorite, isFavorite }) => {
       {books.map((book) => {
         // got this line from stack overflow as mine not work!
         let image = book.volumeInfo.imageLinks?.smallThumbnail;
-        let title = book.volumeInfo?.title;
-        let author = book.volumeInfo?.authors[0];
+        let title = book.volumeInfo?.title || "Untitled Book";
+        let author =
+          book.volumeInfo.authors && book.volumeInfo.authors.length > 0
+            ? book.volumeInfo.authors[0]
+            : "Unknown Author";
 
         return (
           <Link

@@ -2,12 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 5px solid #dc8503;
+  border-bottom: 5px solid #588157;
 }
 
 .mainNavbar h2 {
   font-weight: bold;
   font-size: 2rem;
+}
+
+.mainNavbar h2 span {
+  color: #588157;
 }
 .mainNavbar ul {
   list-style-type: none;
@@ -25,4 +29,8 @@
   text-decoration: none;
   color: #fff;
   font-size: 1.6rem;
+}
+
+.mainNavbar > ul > li > a:hover {
+  color: #588157;
 }
