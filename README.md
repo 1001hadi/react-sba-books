@@ -10,7 +10,7 @@
 
 ### This app will give ability of search for specific book to the users and by clicking on any book.they can find more information and summery of the book they select.
 
-### They also can keep their favorite book in their collection page and
+### They also can keep their favorite book in their collection page and it will stored in their local storage.
 
 # Build process:
 
