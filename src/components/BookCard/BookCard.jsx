@@ -43,7 +43,7 @@ const BookCard = ({ books, addFavorite, isFavorite }) => {
                     alert(`"${title}" is already in your favorites!`);
                   } else {
                     addFavorite(book);
-                    alert(`"${title}" Added to your favorites!`);
+                    alert(`"${title}" added to your favorites!`);
                   }
                 }}
               >

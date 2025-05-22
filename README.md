@@ -51,3 +51,7 @@
 ## Challenges
 
 ### My main challenge was how to avoid crashing the app when using none verbal search term, that i got help from stack overflow and few good article in [geagsforgeegs](https://www.geeksforgeeks.org/), that finally help me to fix the bug i had with search term.
+
+### CSS was same how my second challenge and i use css from my previous project i have.
+
+### The state management will be done today by end of day with react useContext
