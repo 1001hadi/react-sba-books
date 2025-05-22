@@ -68,7 +68,7 @@ const BookInfo = ({ addFavorite, removeFavorite, isFavorite }) => {
   const title = volumeInfo.title || "Untitled Book";
   const authors = volumeInfo.authors?.join(", ") || "Unknown Author";
   const publishedDate = volumeInfo.publishedDate || "N/A";
-  const description = volumeInfo.description || "No description available.";
+  const description = volumeInfo.description || "No description available";
   const pageCount = volumeInfo.pageCount || "N/A";
   const categories = volumeInfo.categories[0] || "N/A";
   const averageRating = volumeInfo.averageRating || "N/A";
@@ -76,7 +76,7 @@ const BookInfo = ({ addFavorite, removeFavorite, isFavorite }) => {
   const previewLink = volumeInfo.previewLink;
   const retailPrice = saleInfo?.retailPrice?.amount
     ? `${saleInfo.retailPrice.amount} ${saleInfo.retailPrice.currencyCode}`
-    : "Not for sale";
+    : "Unknown price";
 
   return (
     <div className="details-container">

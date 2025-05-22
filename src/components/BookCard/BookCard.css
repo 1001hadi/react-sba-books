@@ -23,13 +23,16 @@
   text-align: center;
 }
 
+.book-card-link {
+  text-decoration: none;
+}
 .card-body h3 {
   font-size: 1.2em;
   margin-bottom: 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 

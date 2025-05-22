@@ -14,7 +14,7 @@ const FavoriteBook = ({ favoriteBooks, removeFavorite }) => {
       {favoriteBooks.length === 0 ? (
         <p className="no-favorites-message">
           You haven't added any favorite books yet. Go search and add your
-          favorites here!
+          favorites!
         </p>
       ) : (
         <div className="favorite-books">
