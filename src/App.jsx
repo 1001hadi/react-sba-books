@@ -41,7 +41,7 @@ function App() {
         );
         return prevFavorites;
       }
-      alert(`Adding "${bookToAdd.volumeInfo.title}" to favorites.`);
+      // alert(`Adding "${bookToAdd.volumeInfo.title}" to favorites.`);
       return [...prevFavorites, bookToAdd];
     });
   };
@@ -50,7 +50,7 @@ function App() {
   const HandleRemove = (bookId) => {
     setFavoriteBooks((prevFavorites) => {
       const newFavorites = prevFavorites.filter((book) => book.id !== bookId);
-      alert(`Book with ID "${bookId}" has been removed from your favorites.`);
+      // alert(`Book with ID "${bookId}" has been removed from your favorites.`);
       return newFavorites;
     });
   };

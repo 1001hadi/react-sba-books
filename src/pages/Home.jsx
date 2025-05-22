@@ -2,26 +2,47 @@ import "../App.css";
 import { useState } from "react";
 import axios from "axios";
 import BookCard from "../components/BookCard/BookCard";
+
 const Home = ({ addFavorite, isFavorite }) => {
   const [searchQ, setSearchQ] = useState("");
   const [books, setBooks] = useState([]);
+  const [errorMessage, setErrorMessage] = useState(null);
+
   const apiKey = import.meta.env.VITE_API_KEY;
 
   async function handleSearch(e) {
     e.preventDefault();
+    setBooks([]);
+    setErrorMessage(null);
+    // prevent searching for empty strings or not existing book
+    if (!searchQ.trim()) {
+      setErrorMessage("Please enter a search term.");
+      return;
+    }
+
+    // if (!apiKey) {
+    //   setErrorMessage(
+    //     "API Key is missing. Please set VITE_API_KEY in your .env file."
+    //   );
+    //   return;
+    // }
     try {
       const res = await axios.get(
         `https://www.googleapis.com/books/v1/volumes?q=${searchQ}&key=${apiKey}`
       );
       // console.log("Search results:", res.data);
-      if (res.data.items) {
+      if (res.data.items && res.data.items.length > 0) {
+        setBooks(res.data.items || []);
         setBooks(res.data.items);
+        setErrorMessage(null);
       } else {
         setBooks([]);
-        <p>No Book found, try other search!</p>;
+        setErrorMessage("No books found, try a different search term.");
       }
     } catch (err) {
       console.error("Error fetching books:", err);
+      setBooks([]);
+      setErrorMessage("An unexpected error occurred. Please try again.");
     }
   }
   return (
@@ -43,11 +64,15 @@ const Home = ({ addFavorite, isFavorite }) => {
           <button type="submit">Search</button>
         </form>
         <div className="book-container">
-          <BookCard
-            books={books}
-            addFavorite={addFavorite}
-            isFavorite={isFavorite}
-          />
+          {errorMessage && <p className="message-info">{errorMessage}</p>}
+
+          {!errorMessage && (
+            <BookCard
+              books={books}
+              addFavorite={addFavorite}
+              isFavorite={isFavorite}
+            />
+          )}
         </div>
       </div>
     </>
