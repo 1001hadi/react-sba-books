@@ -6,6 +6,15 @@
 
 #
 
+## Technology in use:
+
+- React.js => VITE
+- javaScript(ES6)
+- CSS
+- Axios
+- dotenv
+- [Google Books API](https://developers.google.com/books)
+
 ## About:
 
 ### This app will give ability of search for specific book to the users and by clicking on any book.they can find more information and summery of the book they select.
