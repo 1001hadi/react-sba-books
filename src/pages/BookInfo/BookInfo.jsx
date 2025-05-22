@@ -13,7 +13,7 @@ const BookInfo = ({ addFavorite, removeFavorite, isFavorite }) => {
   const navigate = useNavigate();
 
   const apiKey = import.meta.env.VITE_API_KEY;
-
+  // fetch book info and error handling
   useEffect(() => {
     const fetchBookDetails = async () => {
       try {

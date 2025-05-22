@@ -54,4 +54,10 @@
 
 ### CSS was same how my second challenge and i use css from my previous project i have.
 
-### The state management will be done today by end of day with react useContext
+# If i had more time
+
+- The state management will be replace with react useContext
+- Search query will be save in local storage
+- pagination can be added show more books in both home and favorite page
+- css may can be with Tailwind css
+- authentication can be added.
