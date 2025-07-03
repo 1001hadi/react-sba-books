@@ -23,7 +23,7 @@ const Home = ({ addFavorite, isFavorite }) => {
       const res = await axios.get(
         `https://www.googleapis.com/books/v1/volumes?q=${searchQ}&key=${apiKey}`
       );
-      // console.log("Search results:", res.data);
+      
       if (res.data.items && res.data.items.length > 0) {
         setBooks(res.data.items || []);
         setBooks(res.data.items);

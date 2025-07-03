@@ -21,6 +21,8 @@
 
 ### They also can keep their favorite book in their collection page and it will stored in their local storage.
 
+- note: There is only 1000 daily request limit!
+
 # Build process:
 
 1- The search has been powered by Google Books API.

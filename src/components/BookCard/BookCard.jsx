@@ -3,7 +3,6 @@ import "./BookCard.css";
 import { Link } from "react-router-dom";
 
 const BookCard = ({ books, addFavorite, isFavorite }) => {
-  // console.log(books);
   if (!books || books.length === 0) {
     return;
   }

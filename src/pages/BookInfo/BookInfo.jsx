@@ -9,7 +9,7 @@ const BookInfo = ({ addFavorite, removeFavorite, isFavorite }) => {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // For going back
+
   const navigate = useNavigate();
 
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -122,7 +122,6 @@ const BookInfo = ({ addFavorite, removeFavorite, isFavorite }) => {
       </div>
       <div className="book-description">
         <h3>Description:</h3>
-        {/* This part come from stack overflow as description was show html element in the info page */}
         <div dangerouslySetInnerHTML={{ __html: description }} />
 
         <div className="details-links">
